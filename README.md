@@ -1,22 +1,7 @@
-**Tareas iniciales**
+#**Bienvenido a mi cuenta de github**
 
-**Tutorial sobre las principales herramientas usadas en Sistemas y Tecnologías Web:**
+Soy Josué Toledo Castro, alumno de la Escuela Superior de Ingeniería y Tecnología de la Universidad de La Laguna. A continuación expongo el enlace a mi página personal, dónde podemos encontrar las prácticas he ido desarrollando durante este curso 2015-2016, y algunos proyectos realizados durante mi estancia en el grado.
 
--Nodejs
-
--Atom
-
--Pandoc
-
--Markdown
-
--Cloud 9
-
--Git
-
-**Enlaces a la página y al repositorio:**
-
--Link a a la página web --> http://josuetc94.github.io/
-
--Link al repositorio --> http://josuetc94.github.io/Tareas_iniciales/
+**Enlace a mi página personal**:
+>http://josuetc94.github.io/
 
