@@ -63,6 +63,15 @@ $(document).ready(function()
 	{
 		$("#texto_practica1").css("display","none");
 	});
+  $("#practica2").hover(function()
+  {
+    $("#texto_practica2").fadeIn();
+  },
+  function()
+  {
+    $("#texto_practica2").css("display","none");
+  }
+)
 	$("#tio").click(function()
 	{
 		$("#practicas").show();
@@ -236,7 +245,7 @@ a:hover
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-         
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -276,7 +285,7 @@ a:hover
             </div>
         </div>
         <div class="row no-gutter" style="padding:0px 0px 0px 15px;	">
-          <div id="practica1_"> 
+          <div id="practica1_">
             <div class="col-lg-4 col-sm-6">
                 <a id="practica1" href="http://josuetc94.github.io/Tareas_iniciales/" target = "blank" class="portfolio-box">
                     <img src="img/tutorial_tareas_iniciales.png" class="img-responsive" alt="">
@@ -292,7 +301,7 @@ a:hover
                     </div>
                 </a>
             </div>
-		<div class="col-lg-1 col-sm-1"></div>		
+		<div class="col-lg-1 col-sm-1"></div>
 		<div class="col-lg-4">
 					<div id="texto_practica1" style="display:none">
 					<p>Primera práctica. Se basa en un tutorial sobre la instalación de las principales herramientas que vamos a utilizar durante el transcurso del curso en la asignatura de Sistemas y Tecnologías Web</p>
@@ -300,10 +309,36 @@ a:hover
 				</div>
         </div>
         </div>
+        <br>
+        <div class="row no-gutter" style="padding:0px 0px 0px 15px;	">
+          <div id="practica2_">
+            <div class="col-lg-4 col-sm-6">
+                <a id="practica2" href="http://josuetc94.github.io/Practica2_Conversor_Temperatura/" target = "blank" class="portfolio-box">
+                    <img src="img/Practica2.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                 Conversor de Temperatura
+                            </div>
+                            <div class="project-name">
+                                 Práctica 2
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-4">
+          <div id="texto_practica2" style="display:none">
+          <p>Segunda práctica. Se basa en un conversor de temperaturas desde grados Celsius a Fahrenheit y viceversa, familiarizándonos con los lenguajes Javascript, html y css. Además, se han utilizado herramientas como mocha y chai para la creación de tests y realización de pruebas</p>
+          </div>
+        </div>
+        </div>
+        </div>
         <div class="container">
             <div class="row">
             	<h4 style="padding:10px 10px 10px 20px" id="texto_no_asignaturas"></h3>
-            </div>    
+            </div>
         </div>
     </section>
     <section class="no-padding" id="portfolio">
@@ -331,7 +366,7 @@ a:hover
                     </a>
                 </div>
 				<div class="col-lg-1 col-sm-1">
-				
+
 				</div>
 				<div class="col-lg-4 col-sm-6">
 					<div id="texto_proyecto1" style="display:none">
