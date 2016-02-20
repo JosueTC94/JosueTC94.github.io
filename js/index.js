@@ -1,5 +1,36 @@
 $(document).ready(function()
 {
+	//Descarga inicial de prácticas
+	$.ajax({
+		url: "descarga_inicial.php"
+	})
+	.done(function(data,textStatus,jqXHR)
+	{
+		alert("Entre en el done");
+		alert("Data->"+data.success);
+		alert("Numero de filas->"+data.num_rows);
+	})
+	.fail(function(jqXHR,textStatus,errorThrown)
+	{
+		alert("Entre en el fail");
+        if (jqXHR.status === 0) {
+            console.log('Not connected.\nPlease verify your network connection.');
+          }else if (jqXHR.status == 404) {
+            console.log('The requested page not found. [404]');
+	      }else if (jqXHR.status == 500) {
+	            console.log('Internal Server Error [500].');
+	      }else if (jqXHR === 'parsererror') {
+	            console.log('Requested JSON parse failed.');
+	      }else if (jqXHR === 'timeout') {
+	            console.log('Time out error.');
+	      }else if (jqXHR === 'abort') {
+	            console.log('Ajax request aborted.');
+	      }else{
+	            console.log('Uncaught Error.\n' + jqXHR.responseText);
+	      }
+
+	});
+	
 	$("#proyecto1").hover(function()
 	{
 		$("#texto_proyecto1").fadeIn();
