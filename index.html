@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>alu0100763492@ull.edu.es</title>
+    <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -30,30 +31,36 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <style>
+  #practicas
+  {
+    display:none;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <!--script src="js/index.js" type="text/javascript"></script-->
+  <script>
+  $(document).ready(function()
+  {
+      alert("probando");
+      $("#dsi").click(function()
+      {
+        $("#practicas").show();
+        $.getJSON('js/bd.js', function(datos){
 
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            var output = "<div class=container><div class=row><div class=col-lg-12 text-center><h2 class=section-heading><center>Prácticas realizadas</center></h2><hr class=primary></div></div></div>";
+            output += "<div class="+"container-fluid"+"><div class="+"row no-gutter>";
+            $.each(datos.practicas, function(posicion, practica){
+              output += "<div class=col-lg-4 col-sm-6><a href=# class=portfolio-box><img src=img/portfolio/1.jpg class=img-responsive alt=><div class=portfolio-box-caption><div class=portfolio-box-caption-content><div class=project-category text-faded>Práctica "+practica.id+"</div><div class=project-name>"+practica.titulo+"</div></div></div></a><br><center><a class=btn btn-primary href="+practica.url+">Github</a><a class=btn btn-primary href="+practica.url_paginaweb+">Práctica</a></center></div>";
+            });
+            output += "</div></div>";
+            $("#listado_practicas").html(output);
+        });
+        location.href="#practicas";
+      });
+  });
 
-<script src="js/index.js" type="text/javascript"></script>
-
-<style>
-#practicas
-{
-	display:none;
-}
-a
-{
-	color:#333;
-}
-a:hover
-{
-	color:#F05F40;
-}
-#proyecto1,#stw,#tio,#adbd,#ia,#lpp,#gco
-{
-	cursor:pointer;
-}
-</style>
+  </script>
 </head>
 
 <body id="page-top">
@@ -68,23 +75,23 @@ a:hover
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Josué Toledo Castro</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about"></a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Mis asignaturas</a>
+                        <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Mis proyectos</a>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contacta conmigo</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -96,16 +103,15 @@ a:hover
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Bienvenido a mi web</h1>
+                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
-                <p>Hola! Soy Josué Toledo Castro. Esta página contiene proyectos y prácticas que he realizado durante mis estudios en la Universidad de La Laguna en el grado de Ingeniería Informática. </p>
-                <!--a href="http://josuetc94.github.io/Tareas_iniciales/" class="btn btn-primary btn-xl page-scroll">Empieza ya!</a-->
-                <a href="#services" class="btn btn-primary btn-xl page-scroll">Empieza ya!</a>
+                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
 
-    <!--section class="bg-primary" id="about">
+    <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -116,7 +122,7 @@ a:hover
                 </div>
             </div>
         </div>
-    </section-->
+    </section>
 
     <section id="services">
         <div class="container">
@@ -170,7 +176,7 @@ a:hover
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-android wow bounceIn text-primary"></i>
-                        <a id="ia"><h3>Desarrollo de Sistemas Informáticos</h3></a>
+                        <a id="dsi"><h3>Desarrollo de Sistemas Informáticos</h3></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -192,115 +198,14 @@ a:hover
         </div>
     </section>
 
-<!--Seccion de practicas de asignaturas-->
-<section id="practicas">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Pŕacticas realizadas</h2>
-                    <br>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="pull-left" id="asignatura_elegida"></h2>
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutter" style="padding:0px 0px 0px 15px;	">
-          <div id="practica1_">
-            <div class="col-lg-4 col-sm-6">
-                <a id="practica1" href="http://josuetc94.github.io/Tareas_iniciales/" target = "blank" class="portfolio-box">
-                    <img src="img/tutorial_tareas_iniciales.png" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                 Práctica 1
-                            </div>
-                            <div class="project-name">
-                                 Tareas iniciales
-                                 <br><br><br>
-                                <button type="button" class="btn btn-default">Github</button>
-                                <button type="button" class="btn btn-default">Práctica</button>
 
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        <div class="row no-gutter" style="padding:0px 0px 0px 15px;	">
-          <div id="practica2_">
-            <div class="col-lg-4 col-sm-6">
-                <h3>Práctica1</h3>
-                <a id="practica2" href="http://josuetc94.github.io/Practica2_Conversor_Temperatura/" target = "blank" class="portfolio-box">
-                    <img src="img/Practica2.png" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                 Conversor de Temperatura
-                                 <br>
-                                 Segunda práctica. Se basa en un conversor de temperaturas desde grados Celsius a Fahrenheit y viceversa, familiarizándonos con los lenguajes Javascript, html y css. Además, se han utilizado herramientas como mocha y chai para la creación de tests y realización de pruebas
-
-                            </div>
-                            <div class="project-name">
-                                 Práctica 2
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    <div class="col-lg-1 col-sm-1"></div>
-    <div class="col-lg-4">
-          <div id="texto_practica2" style="display:none">
-          </div>
-        </div>
-        </div>
-        </div>
-        <div class="container">
-            <div class="row">
-            	<h4 style="padding:10px 10px 10px 20px" id="texto_no_asignaturas"></h3>
-            </div>
-        </div>
-    </section>
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Mis proyectos</h2>
-                    <hr class="primary">
-                </div>
-            </div>
+    <section class="no-padding" id="practicas">
+      <div id="listado_practicas"></div>
+        <!--div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
-                    <a id="proyecto1" target = "blank" class="portfolio-box">
-                        <img src="img/pantallazo_tupisocom.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Página web
-                                </div>
-                                <div class="project-name">
-                                    Tupiso.com
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-				<div class="col-lg-1 col-sm-1">
-
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div id="texto_proyecto1" style="display:none">
-					<p>Proyecto desarrollado en la asignatura "Usabilidad y Accesibilidad" del tercer curso del grado de Ingeniería Informática. Se trata de una página de alquiler de viviendas o habitaciones, dónde los usuarios pueden registrarse, contactar y publicar anuncios y observar sus acciones en la web entre otros aspectos </p>
-					</div>
-				</div>
-<!-- -->
-                <!--div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -311,96 +216,40 @@ a:hover
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </a><br>
+                    <center>
+                    <a class="btn btn-primary" href="www.google.com">Github</a>
+                    <a class="btn btn-primary" href="www.google.com">Práctica</a>
+                  </center>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div-->
             </div>
-        </div>
+        </div-->
     </section>
 
-    <!--aside class="bg-dark">
+    <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Free Download at Start Bootstrap!</h2>
                 <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
             </div>
         </div>
-    </aside-->
+    </aside>
 
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contacta conmigo</h2>
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Si existe alguna duda,comentario o sugerencia sobre el contenido de esta página contacta conmigo a través de:</p>
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
-	                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-	                    <p><a href="#">jpalmerotc1994@gmail.com</a></p>
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>123-456-6789</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="#">alu0100763492@ull.edu.es</a></p>
+                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
                 </div>
             </div>
         </div>
