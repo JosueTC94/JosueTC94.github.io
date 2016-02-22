@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>JosueTC94.github.io</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -25,6 +24,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,25 +43,96 @@
   <script>
   $(document).ready(function()
   {
-      alert("probando");
-      $("#dsi").click(function()
-      {
-        $("#practicas").show();
-        $.getJSON('js/bd.js', function(datos){
-
-            var output = "<div class=container><div class=row><div class=col-lg-12 text-center><h2 class=section-heading><center>Prácticas realizadas</center></h2><hr class=primary></div></div></div>";
+    var asignatura = "";
+    $("#sytw").click(function()
+    {
+      asignatura = "sytw";
+      mostrar_practicas(asignatura);
+    });
+    $("#adbd").click(function()
+    {
+      asignatura = "adbd";
+      mostrar_practicas(asignatura);
+    });
+    $("#lpp").click(function()
+    {
+      asignatura = "lpp";
+      mostrar_practicas(asignatura);
+    });
+    $("#ia").click(function()
+    {
+      asignatura = "ia";
+      mostrar_practicas(asignatura);
+    });
+    $("#gco").click(function()
+    {
+      asignatura = "gco";
+      mostrar_practicas(asignatura);
+    });
+    $("#tio").click(function()
+    {
+      asignatura = "tio";
+      mostrar_practicas(asignatura);
+    });
+    $("#aeda").click(function()
+    {
+      asignatura = "aeda";
+      mostrar_practicas(asignatura);
+    });
+    $("#ssi").click(function()
+    {
+      asignatura = "ssi";
+      mostrar_practicas(asignatura);
+    });
+    $("#dsi").click(function()
+    {
+        asignatura = "dsi";
+        mostrar_practicas(asignatura);
+    });
+    function mostrar_practicas(archivo)
+    {
+      $("#listado_practicas").html(" ");
+      $("#practicas").fadeIn("slow");
+      $.getJSON('js/json/'+archivo+'.js', function(datos){
+          //var output = "<div class="+"container"><div class=row><div class=col-lg-12 text-center><h2 class=section-heading><center>Prácticas realizadas</center></h2><hr class=primary></div></div></div>";
+          if(datos != null)
+          {
+            $("#mensaje_asignaturas").css("display","none");
+            var asignatura = datos.Asignatura;
+            var output = "";
             output += "<div class="+"container-fluid"+"><div class="+"row no-gutter>";
             $.each(datos.practicas, function(posicion, practica){
-              output += "<div class=col-lg-4 col-sm-6><a href=# class=portfolio-box><img src=img/portfolio/1.jpg class=img-responsive alt=><div class=portfolio-box-caption><div class=portfolio-box-caption-content><div class=project-category text-faded>Práctica "+practica.id+"</div><div class=project-name>"+practica.titulo+"</div></div></div></a><br><center><a class=btn btn-primary href="+practica.url+">Github</a><a class=btn btn-primary href="+practica.url_paginaweb+">Práctica</a></center></div>";
+              output += "<div class='col-lg-4 col-sm-6'><a href="+practica.url_paginaweb+" class='portfolio-box' target='blank'><img src="+practica.imagen+" class='img-responsive' alt=><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-category text-faded'>Práctica "+practica.id+"</div><div class='project-name'>"+practica.titulo+"</div><br><br><div class='project-category text-faded'>"+asignatura+"</div></div></div></a><br><center><a target='blank' class='btn btn-primary' href="+practica.url+">Github</a></center></div>";
             });
             output += "</div></div>";
             $("#listado_practicas").html(output);
-        });
-        location.href="#practicas";
+          }
+          else
+          {
+              $("#listado_practicas").html(" ");
+              $("#listado_practicas").css("display","none");
+              $("mensaje_asignaturas").html("No hay prácticas disponibles.");
+              $("#mensaje_asignaturas").fadeIn();
+          }
       });
+        location.href="#practicas";
+    }
   });
-
   </script>
+  <style>
+  a
+  {
+  	color:#333;
+  }
+  a:hover
+  {
+  	color:#F05F40;
+  }
+  #sytw,#tio,#adbd,#ia,#lpp,#gco,#dsi,#ssi,#aeda
+  {
+  	cursor:pointer;
+  }
+  </style>
 </head>
 
 <body id="page-top">
@@ -88,9 +160,6 @@
                       <a class="page-scroll" href="#services">Mis asignaturas</a>
                   </li>
                   <li>
-                      <a class="page-scroll" href="#portfolio">Mis proyectos</a>
-                  </li>
-                  <li>
                       <a class="page-scroll" href="#contact">Contacta conmigo</a>
                   </li>
               </ul>
@@ -100,20 +169,20 @@
       <!-- /.container-fluid -->
   </nav>
 
-  <header>
-      <div class="header-content">
-          <div class="header-content-inner">
-              <h1>Bienvenido a mi web</h1>
-              <hr>
-              <p>Hola! Soy Josué Toledo Castro. Esta página contiene proyectos y prácticas que he realizado durante mis estudios en la Universidad de La Laguna en el grado de Ingeniería Informática. </p>
-              <!--a href="http://josuetc94.github.io/Tareas_iniciales/" class="btn btn-primary btn-xl page-scroll">Empieza ya!</a-->
-              <a href="#services" class="btn btn-primary btn-xl page-scroll">Saber más</a>
+      <header>
+          <div class="header-content">
+              <div class="header-content-inner">
+                  <h1>Bienvenido a mi web</h1>
+                  <hr>
+                  <p>Hola! Soy Josué Toledo Castro. Esta página contiene proyectos y prácticas que he realizado durante mis estudios en la Universidad de La Laguna en el grado de Ingeniería Informática. </p>
+                  <!--a href="http://josuetc94.github.io/Tareas_iniciales/" class="btn btn-primary btn-xl page-scroll">Empieza ya!</a-->
+                  <a href="#services" class="btn btn-primary btn-xl page-scroll">Saber más</a>
 
+              </div>
           </div>
-      </div>
-  </header>
+      </header>
 
-    <section class="bg-primary" id="about">
+    <!--section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -124,7 +193,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
     <section id="services">
         <div class="container">
@@ -140,7 +209,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-desktop wow bounceIn text-primary"></i>
-                        <a id="stw"><h3>Sistemas y tecnologías Web</h3></a><br><br>
+                        <a id="sytw"><h3>Sistemas y tecnologías Web</h3></a><br><br>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -177,22 +246,22 @@
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-android wow bounceIn text-primary"></i>
+                        <i class="fa fa-4x fa-server wow bounceIn text-primary"></i>
                         <a id="dsi"><h3>Desarrollo de Sistemas Informáticos</h3></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-android wow bounceIn text-primary"></i>
-                        <a id="ia"><h3>Seguridad en Sistemas informáticos</h3></a>
+                        <i class="fa fa-4x fa-key wow bounceIn text-primary"></i>
+                        <a id="ssi"><h3>Seguridad en Sistemas informáticos</h3></a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-android wow bounceIn text-primary"></i>
-                        <a id="ia"><h3>Algoritmos y Estructuras de datos avanzadas</h3></a>
+                        <i class="fa fa-4x fa-file-code-o wow bounceIn text-primary"></i>
+                        <a id="aeda"><h3>Algoritmos y Estructuras de datos avanzadas</h3></a>
                         <!--p class="text-muted">Asignatura de tercer curso</p-->
                     </div>
                 </div>
@@ -202,6 +271,14 @@
 
 
     <section class="no-padding" id="practicas">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Mis Prácticas</h2>
+                  <hr class="primary">
+              </div>
+          </div>
+      </div>
       <div id="listado_practicas"></div>
         <!--div class="container-fluid">
             <div class="row no-gutter">
@@ -228,14 +305,14 @@
         </div-->
     </section>
 
-    <aside class="bg-dark">
+    <!--aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Free Download at Start Bootstrap!</h2>
                 <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
             </div>
         </div>
-    </aside>
+    </aside-->
 
     <section id="contact">
         <div class="container">
