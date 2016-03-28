@@ -14,6 +14,27 @@
             "imagen": "imagenes_practicas/conversor.jpg",
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/introduccion-josue-nayra-dsi15-16/tree/gh-pages",
             "url_paginaweb": "http://ull-esit-gradoii-dsi.github.io/introduccion-josue-nayra-dsi15-16/"
+        },
+        {
+            "id" : 3, 
+            "titulo": "Conversor de temperatura. OOP",
+            "imagen": "imagenes_practicas/conversor.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/object-oriented-programming-in-js-josue-nayra-dsi15-16",
+            "url_paginaweb": "http://ull-esit-gradoii-dsi.github.io/object-oriented-programming-in-js-josue-nayra-dsi15-16/"
+        },
+        {
+            "id" : 4, 
+            "titulo": "Eliminando switch smell",
+            "imagen": "imagenes_practicas/conversor.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/eliminacion-del-switch-smell-josue-nayra-dsi15-16-1",
+            "url_paginaweb": "http://ull-esit-gradoii-dsi.github.io/eliminacion-del-switch-smell-josue-nayra-dsi15-16-1/"
+        },
+        {
+            "id" : 5, 
+            "titulo": "Conversor. Pruebas Mocha y Chai",
+            "imagen": "imagenes_practicas/practica5.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/mocha-y-chai-josue-nayra-dsi15-16-1/blob/master/README.md",
+            "url_paginaweb": "http://ull-esit-gradoii-dsi.github.io/mocha-y-chai-josue-nayra-dsi15-16-1/vendor/index.html"
         }
     ]
 }
