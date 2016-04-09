@@ -32,9 +32,23 @@
         {
             "id" : 5, 
             "titulo": "Conversor. Pruebas Mocha y Chai",
-            "imagen": "imagenes_practicas/practica5.jpg",
-            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/mocha-y-chai-josue-nayra-dsi15-16-1/blob/master/README.md",
+            "imagen": "imagenes_practicas/conversor.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/mocha-y-chai-josue-nayra-dsi15-16-1/",
             "url_paginaweb": "http://ull-esit-gradoii-dsi.github.io/mocha-y-chai-josue-nayra-dsi15-16-1/vendor/index.html"
+        },
+        {
+            "id" : 6, 
+            "titulo": "Conversor. Karma y Travis",
+            "imagen": "imagenes_practicas/conversor.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/karma-y-travis-josue-nayra-dsi15-16-1",
+            "url_paginaweb": "https://travis-ci.org/ULL-ESIT-GRADOII-DSI/karma-y-travis-josue-nayra-dsi15-16-1"
+        },
+        {
+            "id" : 7, 
+            "titulo": "Conversor. Jquery, localStorage, Express, Underscore y Heroku",
+            "imagen": "imagenes_practicas/conversor.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/localstorage-jquery-underscore-express-sass-heroku-josue-nayra-dsi15-16-1",
+            "url_paginaweb": "https://travis-ci.org/ULL-ESIT-GRADOII-DSI/karma-y-travis-josue-nayra-dsi15-16-1"
         }
     ]
 }
