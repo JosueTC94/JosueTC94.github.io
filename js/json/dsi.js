@@ -46,14 +46,14 @@
         {
             "id" : 7, 
             "titulo": "Conversor. Jquery, localStorage, Express, Underscore y Heroku",
-            "imagen": "imagenes_practicas/conversor.jpg",
+            "imagen": "imagenes_practicas/practica7.jpg",
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/localstorage-jquery-underscore-express-sass-heroku-josue-nayra-dsi15-16-1",
             "url_paginaweb": "https://travis-ci.org/ULL-ESIT-GRADOII-DSI/karma-y-travis-josue-nayra-dsi15-16-1"
         },
         {
             "id" : 8, 
             "titulo": "Conversor. AJAX, ECMA6, ficheros, Node.js modules",
-            "imagen": "imagenes_practicas/conversor.jpg",
+            "imagen": "imagenes_practicas/practica8.jpg",
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-josue-nayra-dsi15-16-1",
             "url_paginaweb": "https://practica8-josue-nayra.herokuapp.com/"
         }
