@@ -57,12 +57,26 @@
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-josue-nayra-dsi15-16-1",
             "url_paginaweb": "https://practica8-josue-nayra.herokuapp.com/"
         },       
-	{
+	    {
             "id" : 9, 
-            "titulo": "Conversor. CSV usando MongoDB",
+            "titulo": "Comma Separated Values",
             "imagen": "imagenes_practicas/practica9.jpg",
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/mongodb-mongoose-csv-josue-nayra-dsi15-16-1.git",
             "url_paginaweb": "https://practica9-dsi1516-josuetc94.c9users.io/"
+        },
+        {
+            "id" : 10, 
+            "titulo": "MongoDB y Populations",
+            "imagen": "imagenes_practicas/practica9.jpg",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/mongoose-y-populations-josue-nayra-dsi15-16-1.git",
+            "url_paginaweb": "https://ide.c9.io/josuetc94/practica10dsi_mongoose_populations"
+        },
+        {
+            "id" : 11, 
+            "titulo": "PROYECTO FINAL. LaPalmaTrail",
+            "imagen": "imagenes_practicas/proyecto.png",
+            "url": "https://github.com/ULL-ESIT-GRADOII-DSI/proyecto-final-de-dsi-josue-nayra-dsi15-16-1.git",
+            "url_paginaweb": "https://ide.c9.io/alu0100406122/proyecto-final-dsi-josue-nayra"
         }
     ]
 }
