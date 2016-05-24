@@ -76,7 +76,7 @@
             "titulo": "PROYECTO FINAL. LaPalmaTrail",
             "imagen": "imagenes_practicas/proyecto.png",
             "url": "https://github.com/ULL-ESIT-GRADOII-DSI/proyecto-final-de-dsi-josue-nayra-dsi15-16-1.git",
-            "url_paginaweb": "https://ide.c9.io/alu0100406122/proyecto-final-dsi-josue-nayra"
+            "url_paginaweb": "https://proyecto-final-dsi-josue-nayra-alu0100406122.c9users.io/"
         }
     ]
 }
